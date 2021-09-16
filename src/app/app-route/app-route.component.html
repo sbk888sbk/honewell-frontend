@@ -1,0 +1,8 @@
+<ul *ngIf="routeData.length !== 0">
+    <li class="routedata" *ngFor="let ele of routeData">
+       <p>Route Path : {{ele.data.routePath}}</p>
+        <p>Route Response: {{ele.data.response | json}} </p>
+        <br>
+    </li>
+</ul>
+<button (click)=purchase()>Purchase API key</button>

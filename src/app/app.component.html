@@ -1,0 +1,11 @@
+<h1>Welcome to Honeywell dashboard</h1>
+<div class="routes" *ngIf="routes.length !== 0">
+  <button *ngFor="let route of showRoutes; let i= index" [route]="route" (click)="clciked(i)">API{{i}}</button>
+  <button (click)="clciked(-1)">ALL</button>
+
+
+  <div *ngFor="let route of routes; let i= index" [route]="route">
+    <hr>
+    <app-route [route]="route"></app-route>
+  </div>
+</div>
